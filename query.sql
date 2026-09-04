@@ -1,7 +1,7 @@
 SELECT 
     TO_CHAR(o.order_purchase_timestamp, 'YYYY-MM') AS order_month,
     o.order_id,
-    oi.price,
+    oi.revenue,
     t.product_category_name_english AS category_en,
     c.customer_state AS state,
     EXTRACT(DAY FROM (o.order_delivered_customer_date - o.order_purchase_timestamp)) AS delivery_days
